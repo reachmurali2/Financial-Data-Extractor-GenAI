@@ -1,0 +1,6 @@
+data_extractor
+dotenv
+langchain_core
+langchain_groq
+pandas
+streamlit
