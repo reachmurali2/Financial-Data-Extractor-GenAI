@@ -3,7 +3,7 @@ This module processes financial text using a Large Language Model(LLM) from lang
 It takes financial text as input, extracts Revenue (Actual & Expected) and EPS (Actual & Expected),
 and returns a structured JSON response.
 '''
-
+import os 
 from langchain_groq import ChatGroq                          # Imports ChatGroq to use Groq's LLM.import
 from langchain_core.prompts import PromptTemplate            # Imports PromptTemplate to format prompts for the model
 from langchain_core.output_parsers import JsonOutputParser   # Imports JsonOutPutParser to convert the LLM's response into structured JSON
@@ -11,6 +11,7 @@ from langchain_core.exceptions import OutputParserException  # Imports OutputPar
 from dotenv import load_dotenv                               # Loads environment variables from a .env file.
 
 load_dotenv()
+api_key=os.getenv("GROQ_API_KEY")
 llm=ChatGroq(model_name='llama-3.3-70b-versatile', api_key = api_key)           # Creates an instance of the LLM (Llama 3.3-70B)/Chatgroq
 
 # Mock function to extract financial data (replace with actual function)
