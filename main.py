@@ -1,6 +1,12 @@
 import streamlit as st                 # imports streamline, a python library for creating web applications.
 import pandas as pd                    # Imports pandas for handling tabular data.
 from data_extractor import extract     # Imports the extract function from data_extractor.py, which processes financial text.import
+import os                              # imports Python’s built-in os (Operating System) module., The os module provides functions to interact with the operating system,(Access environment variables)
+
+# api_key = os.getenv("GROQ_API_KEY")         # Enable while using on local machine
+
+api_key = st.secrets["GROQ_API_KEY"]      # enable while deploying in streamlit
+
 
 # Title
 st.title("Financial Data Extractor")  # Displays the title of the Streamlit app
