@@ -11,7 +11,7 @@ from langchain_core.exceptions import OutputParserException  # Imports OutputPar
 from dotenv import load_dotenv                               # Loads environment variables from a .env file.
 
 load_dotenv()
-llm=ChatGroq(model_name='llama-3.3-70b-versatile'api_key = api_key)           # Creates an instance of the LLM (Llama 3.3-70B)/Chatgroq
+llm=ChatGroq(model_name='llama-3.3-70b-versatile', api_key = api_key)           # Creates an instance of the LLM (Llama 3.3-70B)/Chatgroq
 
 # Mock function to extract financial data (replace with actual function)
 def extract(article_text):                                   # Defines the extracts function, which takes a financial news as input
